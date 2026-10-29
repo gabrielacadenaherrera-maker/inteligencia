@@ -1,0 +1,13 @@
+INDUSTRIA EFICIENTE - GABRIELA CADENA HERRERA
+
+Contenido:
+- Ocho páginas HTML conectadas por el mismo menú.
+- Carpeta img con ilustraciones SVG locales.
+- Proyecto realizado con HTML5, sin CSS ni JavaScript, siguiendo las restricciones de la asignación.
+
+Antes de entregar:
+1. Abre index.html en el navegador y prueba todos los enlaces.
+2. En contacto.html reemplaza los datos entre corchetes por los tuyos si deseas incluirlos.
+3. Revisa el contenido y cámbialo a tus propias palabras para poder explicarlo en clase.
+4. Sube todos los archivos y la carpeta img al repositorio de GitHub.
+5. Activa GitHub Pages y entrega ambos enlaces: repositorio y página publicada.

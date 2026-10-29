@@ -1,0 +1,217 @@
+/* ==========================================================================
+   ESTILOS GENERALES - INGENIERÍA E INDUSTRIA EFICIENTE
+   ========================================================================== */
+
+/* Variables de Paleta de Colores y Tipografía Industrial */
+:root {
+    /* Paleta Principal */
+    --color-primario: #0B2545;       /* Azul marino industrial / Acero */
+    --color-secundario: #134074;     /* Azul de ingeniería */
+    --color-acento: #EE6C4D;         /* Naranja de seguridad / Alerta */
+    
+    /* Neutros */
+    --color-fondo: #F4F6F8;          /* Gris claro técnico */
+    --color-tarjeta: #FFFFFF;        /* Blanco para contenidos */
+    --color-texto: #1D2D44;          /* Gris muy oscuro para lectura */
+    --color-texto-mutado: #6C7A89;   /* Gris medio para etiquetas/subtítulos */
+    --color-borde: #D1D5DB;          /* Gris para divisiones */
+
+    /* Tipografía y Escala de Tamaños de Letra */
+    --fuente-principal: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    --tamano-base: 16px;
+    --tamano-h1: 2.25rem;  /* ~36px */
+    --tamano-h2: 1.75rem;  /* ~28px */
+    --tamano-h3: 1.25rem;  /* ~20px */
+    --tamano-p: 1.05rem;   /* ~16.8px */
+    --tamano-sm: 0.875rem; /* ~14px */
+}
+
+/* Restablecimiento Básico */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    font-size: var(--tamano-base);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   TAMAÑOS Y COLORES DE LETRAS (TIPOGRAFÍA)
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-primario);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: var(--tamano-h1);
+    border-bottom: 3px solid var(--color-acento);
+    padding-bottom: 0.3em;
+}
+
+h2 {
+    font-size: var(--tamano-h2);
+    position: relative;
+    padding-left: 12px;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--color-secundario);
+}
+
+h3 {
+    font-size: var(--tamano-h3);
+    color: var(--color-secundario);
+}
+
+p {
+    font-size: var(--tamano-p);
+    margin-bottom: 1rem;
+}
+
+small, .texto-secundario {
+    font-size: var(--tamano-sm);
+    color: var(--color-texto-mutado);
+}
+
+/* ==========================================================================
+   NAVEGACIÓN Y ENCABEZADO
+   ========================================================================== */
+
+header {
+    background-color: var(--color-primario);
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    color: #FFFFFF;
+    border-bottom: none;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--tamano-p);
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.activo {
+    color: var(--color-acento);
+}
+
+/* ==========================================================================
+   ESTRUCTURA Y CONTENEDORES (DISEÑO INDUSTRIAL)
+   ========================================================================== */
+
+.contenedor {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.tarjeta, .panel-ingenieria {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-top: 4px solid var(--color-secundario);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-radius: 2px; /* Esquinas técnicas, casi rectas */
+}
+
+/* Grid para paneles de métricas o gestión */
+.grid-industrial {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* ==========================================================================
+   TABLAS TÉCNICAS Y BOTONES
+   ========================================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: var(--tamano-p);
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-borde);
+    text-align: left;
+}
+
+th {
+    background-color: var(--color-primario);
+    color: #FFFFFF;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: var(--tamano-sm);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.btn-industrial {
+    display: inline-block;
+    background-color: var(--color-secundario);
+    color: #FFFFFF;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    font-size: var(--tamano-p);
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-industrial:hover {
+    background-color: var(--color-acento);
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA
+   ========================================================================== */
+
+footer {
+    background-color: var(--color-primario);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    font-size: var(--tamano-sm);
+    border-top: 3px solid var(--color-acento);
+}
